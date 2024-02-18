@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1d2b3a;
+}
+
+.login-box{
+    height: 340px;
+    background: transparent;
+    color:#00dfc4;
+    top: 38%;
+    left: center;
+    position: absolute;
+    transform: (-50%,-50%);
+    border-radius: 30px;
+}
+
+.inputBox{
+    position: relative;
+    width: 300px;
+}
+
+.inputBox input{
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    background: transparent;
+    border-radius: 5px;
+    color: #00dfc4;
+    border: 1px solid  #00dfc4;
+    font-size: 1em;
+}
+
+.inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 15px 20px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: 0.5s;
+    text-transform: uppercase;
+    color: #00dfc4;
+    letter-spacing: 0.1rem;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span{
+    color: #1d2b3a;
+    font-size: 0.75rem;
+    transform: translateX(10px) translateY(-7px);
+    padding: 0 0px;
+    background: #00dfc4;
+    border-radius: 2px;
+}
+
+#toggle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    background: url(eye-solid.png);
+    width: 25px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+#toggle.hide{
+    background: url(eye-slash-solid.png);
+    background-size: cover;
+    background-position: center;
+    width: 25px;
+    height: 20px;
+}
