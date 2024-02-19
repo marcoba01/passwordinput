@@ -1,13 +1,15 @@
-let password = document.getElementById("password");
-let togglePassword = document.getElementById("toggle");
+function showHide() {
+    const passwordInput = document.getElementById('password');
+    const toggleButton = document.getElementById('toggle');
+    
 
-function showHide(){
-    if(password.type === 'password'){
-        password.setAttribute('type','text');
-        togglePassword.classList.add('hide');
-    }
-    else{
-        password.setAttribute('type', 'password');
-        togglePassword.classList.remove('hide');
+    if (passwordInput.type === 'password') {
+        toggleButton.classList.add('hide');
+        passwordInput.type = 'text' ;
+        passwordInput.style.backgroundColor = 'white';
+    } else {
+        passwordInput.type = 'password';
+        toggleButton.classList.remove('hide');
+        passwordInput.style.backgroundColor = 'transparent';
     }
 }
